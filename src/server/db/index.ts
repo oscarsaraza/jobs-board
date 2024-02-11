@@ -5,8 +5,11 @@ import { env } from "~/env.js";
 import * as schema from "./schema";
 
 export const db = drizzle(
-  new Database(env.DATABASE_URL, {
-    fileMustExist: false,
-  }),
-  { schema }
+  new Database(
+    "db.sqlite", // env.DATABASE_URL,
+    {
+      fileMustExist: false,
+    },
+  ),
+  { schema },
 );

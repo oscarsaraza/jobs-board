@@ -6,7 +6,7 @@ export default {
   schema: "./src/server/db/schema.ts",
   driver: "better-sqlite",
   dbCredentials: {
-    url: env.DATABASE_URL,
+    url: "db.sqlite", // env.DATABASE_URL,
   },
   tablesFilter: ["jobs-board_*"],
 } satisfies Config;
